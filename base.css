@@ -1,0 +1,313 @@
+/* ==========================================================================
+   HardSec 2026 — base styles
+   Design tokens, reset, typography, layout helpers, buttons, reveal motion.
+   Change colours and fonts here; every other stylesheet reads these tokens.
+   ========================================================================== */
+
+:root {
+  /* brand */
+  --blue: #2438ff;
+  --blue-deep: #1522c4;
+  --blue-hi: #5667ff;
+  --blue-line: rgba(120, 140, 255, 0.28);
+  --flare: #ff5a1f;
+  --flare-hi: #ff7b45;
+  --sun: #ffc83d;
+  --mint: #5cffa6;
+
+  /* surfaces */
+  --ink: #060a22;
+  --ink-2: #0a1038;
+  --panel: #0e1650;
+  --panel-2: #121c66;
+
+  /* text */
+  --text: #f2f4ff;
+  --mute: #aab4ec;
+  --dim: #7c88cf;
+
+  /* type */
+  --display: 'Unbounded', 'Arial Black', system-ui, sans-serif;
+  --body: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+
+  /* layout */
+  --wrap: 1120px;
+  --gutter: 20px;
+  --nav-h: 68px;
+  --radius: 16px;
+
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--ink);
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-h) + 12px);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+figure {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--display);
+}
+
+h2 {
+  font-weight: 800;
+  font-size: clamp(26px, 4.4vw, 46px);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin-top: 12px;
+  text-wrap: balance;
+}
+
+:focus-visible {
+  outline: 3px solid var(--sun);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -80px;
+  z-index: 400;
+  background: var(--sun);
+  color: var(--ink);
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- layout ---------- */
+
+.wrap {
+  width: min(var(--wrap), 100% - (var(--gutter) * 2));
+  margin-inline: auto;
+  position: relative;
+}
+
+section {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(60px, 9vw, 108px);
+}
+
+.s-ink {
+  background: var(--ink);
+}
+
+.s-ink-2 {
+  background: var(--ink-2);
+}
+
+.glow::before {
+  content: '';
+  position: absolute;
+  width: 620px;
+  height: 620px;
+  right: -220px;
+  top: -200px;
+  background: radial-gradient(circle, rgba(36, 56, 255, 0.38), transparent 65%);
+  pointer-events: none;
+}
+
+.glow.left::before {
+  right: auto;
+  left: -240px;
+  top: auto;
+  bottom: -260px;
+  background: radial-gradient(circle, rgba(255, 90, 31, 0.2), transparent 65%);
+}
+
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--flare-hi);
+}
+
+.lede {
+  font-size: clamp(17px, 2vw, 20px);
+  line-height: 1.6;
+  color: var(--mute);
+  max-width: 58ch;
+  margin-top: 16px;
+  text-wrap: pretty;
+}
+
+.lede b {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ---------- buttons ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--body);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  padding: 16px 28px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--flare);
+  color: var(--ink);
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 12px 34px rgba(255, 90, 31, 0.4);
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 44px rgba(255, 90, 31, 0.55);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn--ghost {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, 0.55);
+}
+
+.btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0 0 0 1.5px #fff;
+}
+
+.btn--small {
+  padding: 12px 20px;
+  font-size: 15px;
+}
+
+.btn[disabled],
+.btn[aria-disabled='true'] {
+  cursor: default;
+  pointer-events: none;
+}
+
+/* ---------- scroll reveal ----------
+   Content is only hidden when the tiny script in <head> has marked the page
+   as "js"; the page never stays hidden if scripts fail (see .reveal-all). */
+
+.js .rv {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: var(--d, 0s);
+}
+
+.js .rv.in,
+.reveal-all .rv {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .js .rv {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* the HTML "hidden" attribute must always win over component display rules */
+[hidden] {
+  display: none !important;
+}
+
+/* Unbounded is tightly spaced at display sizes; give word gaps a little air */
+h2,
+h3,
+h4,
+h5,
+.quote q,
+.pitch .big {
+  word-spacing: 0.12em;
+}

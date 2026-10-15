@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HardSec 2026 | Hardware-security hackathon at IIIT Allahabad</title>
+<meta name="description" content="HardSec 2026: a two-day hardware-security training and hackathon for engineering students across India. IIIT Allahabad, supported by IEEE CASS. Prize pool of Rs 30,000+ and certificates.">
+<meta name="theme-color" content="#060a22">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="HardSec 2026: Break the cipher">
+<meta property="og:description" content="A two-day hardware-security hackathon for engineering students across India. Three phases, three tracks, Rs 30,000+ in prizes.">
+<meta property="og:image" content="https://adityaantil.github.io/hardsec-2026/og-image.png">
+<meta property="og:url" content="https://adityaantil.github.io/hardsec-2026/">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://adityaantil.github.io/hardsec-2026/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Marks the page as "js" so scroll-reveal can run; if scripts ever fail, everything is shown after 4 seconds. -->
+<script>
+  document.documentElement.classList.add('js');
+  setTimeout(function () { document.documentElement.classList.add('reveal-all'); }, 4000);
+</script>
+
+<link rel="preload" href="unbounded-latin-900-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="components.css">
+<link rel="stylesheet" href="sections.css">
+</head>
+<body>
+
+<!--
+  =====================  HOW TO EDIT THIS PAGE  =====================
+  Search (Ctrl+F) for these markers:
+    EDIT-DATE ......... event dates (also the countdown in config.js)
+    EDIT-CONTACT ...... contact e-mail
+    SECTION: TRACKS ... the three phases / tracks
+    SECTION: TEAM ..... organizing team (copy one <li class="member"> block)
+    SECTION: FACULTY .. organizing faculty
+    SECTION: PARTNERS . sponsors
+    SECTION: REGISTRATION ... see README.md; registration is switched on from config.js
+  ====================================================================
+-->
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"><i id="prog"></i></div>
+
+<!-- ======================= PRIZE BAR (always visible at the very top) ======================= -->
+<div class="topbar" role="region" aria-label="Prize announcement">
+  <div class="wrap">
+    <p><span class="amount">&#8377;30,000+</span> in prizes <span class="long">&middot; plus a certificate for every participant</span></p>
+    <a href="#prizes">See rewards</a>
+  </div>
+</div>
+
+<!-- ======================= HEADER + NAVIGATION ======================= -->
+<header class="site-header" id="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="HardSec 2026 home">
+      <span class="logo-plaque"><img src="ieee-cass-up-section-logo.png" width="360" height="222" alt="IEEE UP Section (India) CASS Chapter"></span>
+      <span><span class="brand-name">HardSec 2026</span><small>Supported by IEEE CASS &middot; UP Section (India)</small></span>
+    </a>
+
+    <nav aria-label="Sections">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#tracks">Tracks</a></li>
+        <li><a href="#program">Program</a></li>
+        <li><a href="#career">Why join</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <a class="pill-cta" href="#register" data-register data-open-label="REGISTER NOW" data-closed-label="OPENING SOON">OPENING SOON</a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- mobile menu: opened by the hamburger button -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Who is behind this</a></li>
+      <li><a href="#join">Who can join</a></li>
+      <li><a href="#program">Program</a></li>
+      <li><a href="#tracks">Three phases &middot; Tracks</a></li>
+      <li><a href="#career">Why join</a></li>
+      <li><a href="#team">Organizing team</a></li>
+      <li><a href="#faculty">Organizing faculty</a></li>
+      <li><a href="#partners">Partners</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="menu-foot">
+      <a class="btn" href="#register" data-register data-open-label="Register now &rarr;" data-closed-label="Registration opens soon &rarr;">Registration opens soon &rarr;</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ======================= HERO ======================= -->
+<div class="hero" id="top">
+  <div class="orb orb--a" aria-hidden="true"></div><div class="orb orb--b" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-chips">
+      <span class="chip-tag chip-tag--sun">21&ndash;22 NOV 2026 (TENTATIVE)</span> <!-- EDIT-DATE -->
+      <span class="chip-tag">IIIT Allahabad</span>
+      <span class="chip-tag">Open pan-India</span>
+    </div>
+    <h1>HardSec<span class="yr"> 26</span></h1>
+    <div class="hero-grid">
+      <div>
+        <p class="hero-tag">A hardware-security hackathon for engineering students across India.</p>
+
+        <a class="hero-prize" href="#prizes" aria-label="Prize pool: 30,000 rupees and more">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#ffc83d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v5a4 4 0 0 1-8 0V4Z"/><path d="M8 6H4c0 3 1.5 4.5 4 5M16 6h4c0 3-1.5 4.5-4 5M12 13v4M8 21h8M10 17h4"/></svg>
+          <span><b>&#8377;30,000+</b><span>Prize pool &middot; certificates for all</span></span>
+        </a>
+
+        <div class="mission"><span>Your mission:</span><span class="decode" id="decode" data-text="Break the cipher">Break the cipher</span></div>
+        <div class="cta-row">
+          <a class="btn" href="#register" data-register data-open-label="Register now &rarr;" data-closed-label="Registration opens soon &rarr;">Registration opens soon &rarr;</a>
+          <a class="btn btn--ghost" href="#tracks">Explore the tracks</a>
+        </div>
+        <div class="seat"><span class="dot" aria-hidden="true"></span><span data-seat data-open-label="Limited seats &middot; register before they fill" data-closed-label="Limited seats &middot; get notified the day it opens">Limited seats &middot; get notified the day it opens</span></div>
+
+        <div class="countdown" id="countdown" role="timer" aria-label="Countdown to the event">
+          <div class="cd"><span class="num" id="cd-days">--</span><span class="lbl">days</span></div>
+          <div class="cd"><span class="num" id="cd-hours">--</span><span class="lbl">hrs</span></div>
+          <div class="cd"><span class="num" id="cd-mins">--</span><span class="lbl">min</span></div>
+          <div class="cd"><span class="num" id="cd-secs">--</span><span class="lbl">sec</span></div>
+        </div>
+      </div>
+
+      <div class="console" aria-hidden="true">
+        <div class="sticker">BASIC CODE<br>IS ENOUGH</div>
+        <div class="c-top"><span class="dots"><span></span><span></span><span></span></span><span>Security lab / live telemetry</span><span class="on">&#9679; ONLINE</span></div>
+        <div class="c-body">
+          <div class="c-art">
+<svg viewBox="0 0 460 320" focusable="false">
+              <defs>
+                <pattern id="gr" width="23" height="23" patternUnits="userSpaceOnUse"><path d="M23 0H0V23" fill="none" stroke="rgba(120,140,255,.16)" stroke-width="1"/></pattern>
+                <linearGradient id="die" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4A5CFF"/><stop offset="1" stop-color="#1522C4"/></linearGradient>
+                <linearGradient id="scan" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FF5A1F" stop-opacity="0"/><stop offset=".5" stop-color="#FF5A1F"/><stop offset="1" stop-color="#FF5A1F" stop-opacity="0"/></linearGradient>
+              </defs>
+              <rect width="460" height="320" fill="url(#gr)"/>
+              <g stroke="#8C9BFF" stroke-width="3.5" stroke-linecap="round" opacity=".85">
+                <path d="M150 70v-24M178 70v-24M206 70v-24M234 70v-24M262 70v-24M290 70v-24"/>
+                <path d="M150 190v24M178 190v24M206 190v24M234 190v24M262 190v24M290 190v24"/>
+                <path d="M120 98h-24M120 118h-24M120 138h-24M120 158h-24"/>
+                <path d="M320 98h24M320 118h24M320 138h24M320 158h24"/>
+              </g>
+              <rect x="120" y="70" width="200" height="120" rx="10" fill="url(#die)" stroke="#B8C2FF" stroke-width="2.5"/>
+              <rect x="138" y="86" width="164" height="88" rx="6" fill="#0A1140" opacity=".55"/>
+              <text x="220" y="124" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="700" font-size="20" fill="#fff" letter-spacing="4">MEMORY</text>
+              <text x="220" y="156" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="700" font-size="26" fill="#FFC83D">?</text>
+              <g stroke="#FF5A1F" stroke-width="3.5" stroke-linecap="round"><path d="M178 8V66" class="pin-pulse"/><path d="M262 2V66" class="pin-pulse d2"/></g>
+              <circle cx="178" cy="68" r="6" fill="#FF5A1F"/><circle cx="262" cy="68" r="6" fill="#FF5A1F"/>
+              <g font-family="JetBrains Mono, monospace" font-weight="700" font-size="13" fill="#8C9BFF" opacity=".8"><text x="356" y="112" class="pin-pulse d3">1</text><text x="376" y="136">0</text><text x="358" y="160" class="pin-pulse">1</text><text x="30" y="112">0</text><text x="52" y="136" class="pin-pulse d2">1</text></g>
+              <path id="wave" fill="none" stroke="#FF5A1F" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M20 270 L60 270 L76 244 L92 292 L110 236 L128 296 L146 256 L166 268 L190 226 L212 298 L236 248 L258 270 L282 232 L304 294 L328 260 L350 270 L440 270"/>
+              <rect class="scan-line" x="0" y="0" width="460" height="3" fill="url(#scan)" opacity=".8"/>
+            </svg>
+          </div>
+          <div class="telemetry">
+            <div class="metric hot"><small>Clock</small><b>LEAKING</b></div>
+            <div class="metric warn"><small>Power</small><b>MONITORING</b></div>
+            <div class="metric"><small>Memory</small><b>UNDER TEST</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================= FACTS (prize first) ======================= -->
+<div class="facts-wrap">
+  <div class="wrap">
+    <div class="facts">
+      <div class="prize" id="prizes">
+        <div><div class="label">Prize pool</div><div class="big">&#8377;30,000+</div></div>
+        <p>in prizes for the top teams across all three phases, and a certificate for every participant.</p>
+      </div>
+      <div><div class="label">When</div><div class="v">21&ndash;22 Nov 2026<small>(tentative)</small></div></div> <!-- EDIT-DATE -->
+      <div><div class="label">Where</div><div class="v">Dept. of ECE, IIIT Allahabad<small>On-site or remote, pan-India</small></div></div>
+      <div><div class="label">Open to</div><div class="v">Engineering students<small>All levels, 1st year welcome</small></div></div>
+      <div><div class="label">Entry</div><div class="v">Free for IEEE/CASS members<small>&#8377;549 for others</small></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================= TICKER ======================= -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Break the cipher</span><span>Discover</span><span>Engineer</span><span>Invent</span><span>Curious minds welcome</span><span>Basic code is enough</span>
+    <span>Break the cipher</span><span>Discover</span><span>Engineer</span><span>Invent</span><span>Curious minds welcome</span><span>Basic code is enough</span>
+  </div>
+</div>
+
+<!-- ======================= THE IDEA ======================= -->
+<section class="pitch s-ink glow" id="about">
+  <div class="wrap">
+    <span class="label rv">// The idea</span>
+    <p class="big rv" style="--d:.08s">A chip never tells you its <mark>secret</mark>. But it hums while it works.</p>
+    <p class="sub rv" style="--d:.16s">In its power draw, in its timing, in what happens when you nudge it. HardSec 2026 is where you learn to listen, to push, and to prove that "secure" hardware is a claim you can test. You do not need to be an expert. You need to be curious enough to ask <b>"what if I push here?"</b></p>
+    <ul class="leaks rv" style="--d:.24s"><li>Timing</li><li>Power</li><li>Memory</li><li>Faults</li></ul>
+  </div>
+</section>
+
+<!-- ======================= IIITA EXPERIENCE ======================= -->
+<section class="s-ink-2 glow left" id="experience">
+  <div class="wrap">
+    <span class="label rv">// Who is behind this</span>
+    <h2 class="rv" style="--d:.06s">IIIT Allahabad has done this at national scale.</h2>
+    <p class="lede rv" style="--d:.12s">This is our first HardSec. It is not our first national program. We know how to bring <b>hundreds of students and faculty</b> from across India into one room, and how to make it worth their time.</p>
+
+    <ul class="stats">
+      <li class="stat rv"><div class="n"><span data-count="11">11</span><sup>th</sup></div><p>edition of STPVD, our Summer Training Program on VLSI Design, running every year since 2015</p></li>
+      <li class="stat rv" style="--d:.08s"><div class="n"><span data-count="80">80</span><sup>+</sup></div><p>engineering colleges with active participation in STPVD across India</p></li>
+      <li class="stat rv" style="--d:.16s"><div class="n"><span data-count="1000">1,000</span><sup>+</sup></div><p>participants engaged through our programs</p></li>
+      <li class="stat rv" style="--d:.24s"><div class="n"><span data-count="30">30</span><sup>+</sup></div><p>institutes reached through the AICTE QIP-PG national certification program</p></li>
+    </ul>
+
+    <div class="creds">
+      <div class="cred rv"><svg viewBox="0 0 24 24" fill="none" stroke="#7F8CFF" stroke-width="1.8" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4Z"/><path d="M9 12l2 2 4-4"/></svg><div><h3>Supported by IEEE CASS</h3><p>HardSec 2026 is supported by the IEEE Circuits and Systems Society, UP Section (India), through a 2026 Student Branch Chapter Activity Support grant (SBC14321E).</p></div></div>
+      <div class="cred rv" style="--d:.06s"><svg viewBox="0 0 24 24" fill="none" stroke="#FF7B45" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg><div><h3>Led by active researchers</h3><p>Organized from the Department of ECE at IIIT Allahabad, where hardware-enabled cybersecurity is a day-to-day research area, not a one-off topic.</p></div></div>
+      <div class="cred rv"><svg viewBox="0 0 24 24" fill="none" stroke="#7F8CFF" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 14h4"/></svg><div><h3>Backed by STPVD</h3><p>The same team that runs STPVD, IIIT Allahabad's hands-on training in analog, digital and mixed-signal IC design, FPGA and EDA tools.</p></div></div>
+      <div class="cred rv" style="--d:.06s"><svg viewBox="0 0 24 24" fill="none" stroke="#FF7B45" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg><div><h3>AICTE QIP-PG national program</h3><p>Our organizers are involved in the AICTE QIP-PG certification program "From Semiconductors to Chips", which has seen faculty participation from 30+ institutes.</p></div></div>
+    </div>
+
+    <div class="gallery">
+      <figure class="g-main rv"><img src="semchips-cohort.jpg" width="800" height="600" alt="SemChips cohort outside the Department of ECE, IIIT Allahabad" loading="lazy"><figcaption>SemChips cohort &middot; IIIT Allahabad</figcaption></figure>
+      <figure class="g-poster rv" style="--d:.08s"><img src="stpvd-11th-edition-poster.jpg" width="420" height="630" alt="Poster of the 11th edition of STPVD" loading="lazy"><figcaption>STPVD &middot; 11th edition</figcaption></figure>
+      <div class="g-pair">
+        <figure class="rv"><img src="semchips-session.jpg" width="1000" height="275" alt="SemChips programme session with faculty participants and guests" loading="lazy"><figcaption>SemChips programme session</figcaption></figure>
+        <figure class="rv" style="--d:.08s"><img src="student-participants.jpg" width="1000" height="390" alt="Student participants at IIIT Allahabad" loading="lazy"><figcaption>Student participants</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= WHO CAN JOIN ======================= -->
+<section class="band-blue" id="join">
+  <div class="wrap">
+    <span class="label rv" style="color:var(--sun)">// Who can join</span>
+    <h2 class="rv" style="--d:.06s">If you can write a little code, you belong here.</h2>
+    <div class="join">
+      <div class="card rv">
+        <h3>Know any one of these? You are in.</h3>
+        <div class="langs"><span class="lang">Python</span><span class="or">or</span><span class="lang lang--c">C</span><span class="or">or</span><span class="lang lang--v">Verilog</span></div>
+        <p><b>Basic is enough.</b> A loop, an if-statement, one small Verilog module. Day 1 teaches the security part from scratch, so you do not need any hardware-security background.</p>
+        <p>First-year BTech students are warmly welcome. So are MTech and PhD scholars who want to try attacking real hardware.</p>
+      </div>
+      <div class="card rv" style="--d:.1s">
+        <h3>What you need</h3>
+        <ul class="ticks">
+          <li>Engineering student, any branch, any year</li>
+          <li>A laptop (we share the setup steps after you register)</li>
+          <li>No hardware to buy, no prior security experience</li>
+          <li>Come solo or with a team; we help you find teammates on Day 1</li>
+          <li>On-site at IIIT Allahabad, or remote from anywhere in India</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PROGRAM ======================= -->
+<section class="s-ink-2 glow" id="program">
+  <div class="wrap">
+    <span class="label rv">// Two-day operation</span>
+    <h2 class="rv" style="--d:.06s">Learn on Day 1. Break the cipher on Day 2.</h2>
+    <div class="days">
+      <div class="day day--1 rv">
+        <div class="big">DAY 1</div>
+        <h3>Learn to read the leak</h3>
+        <ul>
+          <li>Memory-array vulnerabilities and real attack surfaces</li>
+          <li>Side-channel leakage, from first principles to correlation</li>
+          <li>Fault injection: how one glitch becomes a bypass</li>
+          <li>Guided, hands-on practice that prepares you for every track on Day 2</li>
+        </ul>
+      </div>
+      <div class="day day--2 rv" style="--d:.1s">
+        <div class="big">DAY 2</div>
+        <h3>Break the cipher</h3>
+        <ul>
+          <li>The hackathon runs in three phases: discover, engineer, invent</li>
+          <li>Each phase is a track with its own challenge, tools and scoring</li>
+          <li>On-site at IIIT Allahabad or remote, on the same leaderboard</li>
+          <li>Prizes from a &#8377;30,000+ pool and certificates for every participant</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= SECTION: TRACKS (three phases) ======================= -->
+<section class="s-ink" id="tracks">
+  <div class="wrap">
+    <span class="label rv">// The hackathon</span>
+    <h2 class="rv" style="--d:.06s">Three phases. Three tracks.</h2>
+    <p class="lede rv" style="--d:.12s">The hackathon moves through three phases. First you <b>find the weakness</b>, then you <b>build the defense</b>, and finally you <b>bring an idea of your own</b>.</p>
+
+    <ol class="phases">
+      <li class="track track--a rv">
+        <div class="track-head"><div class="phase-tag">Phase 1<b>Track A</b></div><span class="track-letter" aria-hidden="true">A</span></div>
+        <h3>Discover the vulnerability</h3>
+        <p>Identify an access-control failure, data corruption, predictable access pattern, or information leakage in a provided memory model. Use Python or C to analyze access logs and demonstrate the weakness.</p>
+        <ul class="stack" aria-label="Tools for Track A"><li>Python</li><li>C</li><li>Access-log analysis</li></ul>
+      </li>
+      <li class="track track--b rv" style="--d:.08s">
+        <div class="track-head"><div class="phase-tag">Phase 2<b>Track B</b></div><span class="track-letter" aria-hidden="true">B</span></div>
+        <h3>Engineer the defense</h3>
+        <p>Implement a secure memory wrapper, access monitor, address checker, integrity mechanism, or another protection technique using Verilog/SystemVerilog and Vivado.</p>
+        <ul class="stack" aria-label="Tools for Track B"><li>Verilog</li><li>SystemVerilog</li><li>Vivado</li></ul>
+      </li>
+      <li class="track track--c rv" style="--d:.16s">
+        <div class="track-head"><div class="phase-tag">Phase 3<b>Track C</b></div><span class="track-letter" aria-hidden="true">C</span></div>
+        <h3>Invent your own solution</h3>
+        <p>Propose a different attack or defense, compare alternative architectures, or build an automated vulnerability detector. Novel approaches are welcome if the team can explain and validate the result.</p>
+        <ul class="stack" aria-label="Tools for Track C"><li>Your choice of tools</li><li>Open-ended</li></ul>
+      </li>
+    </ol>
+
+    <div class="tracks-foot">
+      <div class="pill-list rv"><span class="label">Teams are judged on</span><span class="t">Technical depth</span><span class="t">A working demonstration</span><span class="t">A clear explanation</span><span class="t">Validation of the result</span></div>
+      <p class="note rv"><b>No expert needed.</b> Day 1 prepares you for every track, so a first-year with basic code and a sharp mind has a fair way in, and a final-year has plenty to chew on.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= WHY IT MATTERS ======================= -->
+<section class="s-ink-2 glow left" id="career">
+  <div class="wrap">
+    <span class="label rv">// Why it matters</span>
+    <h2 class="rv" style="--d:.06s">This is a weekend that can move your career.</h2>
+    <p class="lede rv" style="--d:.12s">Software skills are easy to find in a resume pile. <b>Someone who has attacked real hardware</b> is not.</p>
+    <div class="career">
+      <article class="cc rv"><span class="no">01 //</span><svg viewBox="0 0 24 24" fill="none" stroke="#FF7B45" stroke-width="1.8" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="1.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><h3>A skill few graduates have</h3><p>Hardware security sits between electronics and cybersecurity. Few students leave college having attacked a real chip, and that gap shows up in interviews.</p></article>
+      <article class="cc rv" style="--d:.07s"><span class="no">02 //</span><svg viewBox="0 0 24 24" fill="none" stroke="#FF7B45" stroke-width="1.8" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><h3>Proof for your resume</h3><p>Leave with a write-up of the flaw you found, the demo that proved it and the defense you built. Put it on GitHub and in your CV.</p></article>
+      <article class="cc rv" style="--d:.14s"><span class="no">03 //</span><svg viewBox="0 0 24 24" fill="none" stroke="#FFC83D" stroke-width="1.8" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="1"/><path d="M9 6V3M15 6V3M9 21v-3M15 21v-3M6 9H3M6 15H3M21 9h-3M21 15h-3"/></svg><h3>Real attacker thinking</h3><p>Side-channel and fault attacks are studied in research labs and security teams around the world. You get a first taste of how they think.</p></article>
+      <article class="cc rv"><span class="no">04 //</span><svg viewBox="0 0 24 24" fill="none" stroke="#7F8CFF" stroke-width="1.8" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg><h3>A door into research</h3><p>Memory security, side-channel and fault attacks are active research areas at IEEE venues. A good Day 2 can grow into a project, a paper or a thesis idea.</p></article>
+      <article class="cc rv" style="--d:.07s"><span class="no">05 //</span><svg viewBox="0 0 24 24" fill="none" stroke="#FF7B45" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16v12H4zM9 7V4h6v3"/></svg><h3>Roles it points toward</h3><p>Chip and embedded security, secure firmware, hardware verification, VLSI and semiconductor design, and security research.</p></article>
+      <article class="cc rv" style="--d:.14s"><span class="no">06 //</span><svg viewBox="0 0 24 24" fill="none" stroke="#FFC83D" stroke-width="1.8" aria-hidden="true"><circle cx="9" cy="9" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M15 15c3 0 6 1.5 6 4"/></svg><h3>People and credibility</h3><p>A certificate from an IEEE CASS-supported event, plus mentors, faculty and sharp peers from across India.</p></article>
+    </div>
+  </div>
+</section>
+
+<div class="quote">
+  <div class="wrap">
+    <q class="rv">Anyone can use a secure chip. The people who learn to <b>break one</b> get to build the next.</q>
+    <span class="by rv" style="--d:.1s">Start with one track. See where it takes you.</span>
+  </div>
+</div>
+
+<!-- ======================= SECTION: TEAM ======================= -->
+<section class="s-ink" id="team">
+  <div class="wrap">
+    <span class="label rv">// The organizers</span>
+    <h2 class="rv" style="--d:.06s">Meet the organizing team.</h2>
+    <!-- EDIT: copy one <li class="member"> block to add a person. The first 5 are always shown; the rest sit behind the "Show more" button. To use a photo, replace the initials with <img src="name.jpg" alt=""> -->
+    <ul class="team" id="team-list">
+      <li class="member"><span class="avatar" aria-hidden="true">AA</span><span><b>Aditya Antil</b><span class="role">Research Scholar<br>IIIT Allahabad</span></span></li>
+      <li class="member"><span class="avatar" aria-hidden="true">SM</span><span><b>Sukhen Mondal</b><span class="role">Research Scholar<br>IIIT Allahabad</span></span></li>
+      <li class="member"><span class="avatar" aria-hidden="true">NK</span><span><b>Nitish Kumar</b><span class="role">Research Scholar<br>IIIT Allahabad</span></span></li>
+      <li class="member"><span class="avatar" aria-hidden="true">SS</span><span><b>Shilpi Singh</b><span class="role">Research Scholar<br>IIIT Allahabad</span></span></li>
+      <li class="member"><span class="avatar" aria-hidden="true">ST</span><span><b>Shreya Tiwari</b><span class="role">Research Scholar<br>IIIT Allahabad</span></span></li>
+      <li class="member"><span class="avatar" aria-hidden="true">VV</span><span><b>Vikash Kumar Verma</b><span class="role">Research Scholar<br>IIIT Allahabad</span></span></li>
+      <li class="member"><span class="avatar" aria-hidden="true">SK</span><span><b>Sandhya Kannaujiya</b><span class="role">Research Scholar<br>IIIT Allahabad</span></span></li>
+      <li class="member"><span class="avatar" aria-hidden="true">MA</span><span><b>Masood Alam</b><span class="role">Research Scholar<br>IIIT Allahabad</span></span></li>
+    </ul>
+    <div class="team-more" id="team-more" hidden>
+      <button type="button" id="team-toggle" aria-expanded="false" aria-controls="team-list">Show more</button>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= SECTION: FACULTY ======================= -->
+<section class="s-ink-2 glow" id="faculty">
+  <div class="wrap">
+    <span class="label rv">// Guiding the event</span>
+    <h2 class="rv" style="--d:.06s">Organizing faculty.</h2>
+    <ul class="faculty">
+      <li class="fac rv"><span class="avatar" aria-hidden="true">KK</span><span><span class="tag">Faculty organizer</span><b>Dr. Kavindra Kandpal</b><span class="role">Associate Professor<br>IIIT Allahabad</span></span></li>
+      <li class="fac rv" style="--d:.08s"><span class="avatar" aria-hidden="true">MG</span><span><span class="tag">Faculty organizer</span><b>Prof. Manish Goswami</b><span class="role">Professor<br>IIIT Allahabad</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======================= SECTION: PARTNERS ======================= -->
+<section class="s-ink" id="partners">
+  <div class="wrap">
+    <span class="label rv">// Backing this</span>
+    <h2 class="rv" style="--d:.06s">Partners and sponsors.</h2>
+    <p class="lede rv" style="--d:.12s">HardSec 2026 is supported by <b>IEEE CASS</b> and hosted by the IEEE CASS Student Branch Chapter at IIIT Allahabad. If your organization works in hardware security, side-channel analysis or embedded systems and wants to be in front of this audience, we would love to talk. You can support us with <b>funding</b>, hardware, prizes, or a talk for participants.</p>
+    <ul class="sponsors rv">
+      <li class="slot slot--logo"><img src="ieee-cass-up-section-logo.png" width="360" height="222" alt="IEEE UP Section (India) CASS Chapter"></li>
+      <li class="slot">OPEN SLOT &middot; TITLE SPONSOR</li>
+      <li class="slot">OPEN SLOT</li>
+      <li class="slot">OPEN SLOT</li>
+    </ul>
+    <div class="copy-row rv"><a href="mailto:pmi2023001@iiita.ac.in">pmi2023001@iiita.ac.in</a> <!-- EDIT-CONTACT --><button type="button" data-copy="pmi2023001@iiita.ac.in">Copy</button></div>
+    <div class="community rv"><svg viewBox="0 0 24 24" fill="none" stroke="#7F8CFF" stroke-width="1.8" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.6L3 20l1-5.2A8.5 8.5 0 1 1 21 11.5Z"/></svg><div><b>Community group, opening soon</b><span>We will share the WhatsApp or community link here before registration opens. Email us for an early invite.</span></div></div>
+  </div>
+</section>
+
+<!-- ======================= FAQ ======================= -->
+<section class="s-ink-2" id="faq">
+  <div class="wrap">
+    <span class="label rv">// Before you ask</span>
+    <h2 class="rv" style="--d:.06s">Frequently asked questions.</h2>
+    <div class="faq rv">
+      <details open><summary>I am in 1st year and only know basic coding. Can I join?</summary><p>Yes. Knowing basic Python, C or Verilog (any one) is enough. Day 1 teaches the security ideas from the ground up, and every track gives first-time participants a fair way in.</p></details>
+      <details><summary>What do I need to bring?</summary><p>A laptop. Track B uses Vivado for Verilog/SystemVerilog work, and we share the setup steps after you register. You do not need to buy any hardware.</p></details>
+      <details><summary>What are the three phases?</summary><p>Track A: discover a vulnerability in a provided memory model. Track B: engineer a defense in Verilog/SystemVerilog. Track C: invent your own attack, defense or detector. Day 1 prepares you for all three.</p></details>
+      <details><summary>Can I take part remotely?</summary><p>Yes. Remote teams compete on the same leaderboard and for the same prizes as the on-site teams.</p></details>
+      <details><summary>Solo or team?</summary><p>Either works. Come with a team, or come solo and we will help you find teammates at the start of Day 1.</p></details>
+      <details><summary>How are teams judged?</summary><p>On technical depth, a working demonstration, how clearly you explain it, and whether you can validate your result.</p></details>
+      <details><summary>Is it free?</summary><p>Free for IEEE/CASS student members. Everyone else pays a nominal &#8377;549 as registration fee.</p></details>
+      <details><summary>Do I get a certificate?</summary><p>Yes. Every participant gets a certificate, and the top teams share prizes from the &#8377;30,000+ pool.</p></details>
+      <details><summary>When does registration open?</summary><p data-reg-faq>Soon. The event dates are tentative until registration opens. Email us and we will tell you the moment it does.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= REGISTERED PARTICIPANTS (hidden until enabled in config.js) ======================= -->
+<section class="registered s-ink" id="registered" hidden>
+  <div class="wrap">
+    <span class="label">// Registered</span>
+    <h2>Registered participants.</h2>
+    <div class="table-wrap"><table id="registered-table"><caption class="sr-only">Registered participants</caption><thead></thead><tbody></tbody></table></div>
+    <p class="count" id="registered-count"></p>
+  </div>
+</section>
+
+<!-- ======================= SECTION: REGISTRATION =======================
+  Registration is switched on from config.js (open: true + formUrl). No HTML edits needed. See README.md.
+-->
+<div class="reg" id="register">
+  <div class="wrap">
+    <span class="pill" id="reg-pill">OPENING SOON</span>
+    <h2 id="reg-title">Your seat is waiting.</h2>
+    <p class="reg-text" id="reg-text">Registration opens soon. Seats are limited so that the hands-on sessions stay real. Email us now and we will write to you the moment it goes live.</p>
+    <div class="row">
+      <a class="btn" id="reg-btn" href="#register" aria-disabled="true" data-register-button>Registration opens soon</a>
+      <div class="copy-row"><a href="mailto:pmi2023001@iiita.ac.in">pmi2023001@iiita.ac.in</a> <!-- EDIT-CONTACT --><button type="button" data-copy="pmi2023001@iiita.ac.in">Copy</button></div>
+    </div>
+    <p class="small" id="reg-note">Event dates are tentative and may change before registration opens.</p> <!-- EDIT-DATE -->
+    <div class="reg-embed" id="reg-embed" hidden></div>
+  </div>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p class="f-brand">HardSec 2026</p>
+        <p>Supported by IEEE CASS &middot; UP Section (India)<br>IEEE CASS Student Branch Chapter, IIIT Allahabad</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#tracks">Tracks</a></li>
+          <li><a href="#program">Program</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Queries and contact</h3>
+        <ul>
+          <li><a href="mailto:pmi2023001@iiita.ac.in">pmi2023001@iiita.ac.in</a></li> <!-- EDIT-CONTACT -->
+          <li><a id="repo-link" href="https://github.com/" rel="noopener" hidden>Source on GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal"><span>&copy; <span id="year">2026</span> HardSec &middot; IEEE CASS Student Branch Chapter, IIIT Allahabad</span><span>Open-source website &middot; MIT licence (code)</span></div>
+  </div>
+</footer>
+
+<button class="to-top" id="to-top" type="button" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="config.js"></script>
+<script src="main.js" defer></script>
+<script src="registration.js" defer></script>
+</body>
+</html>
